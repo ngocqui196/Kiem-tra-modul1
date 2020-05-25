@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<label for="num"></label>
+<input type="number" id="num" placeholder="Nhập số">
+<input type="button" onclick="isPrime()" value="Enter">
+<script>
+    function checkSNT(num) {
+        let isPrime = true;
+        if (num <2){
+            isPrime = false;
+        }
+        else {
+            for (let j = 2; j <= Math.sqrt(num); j++) {
+                if (num % j === 0){
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+        return isPrime;
+    }
+
+
+
+    function isPrime() {
+        let sum = 0;
+        let num = document.getElementById("num").value;
+        for (let j = 2; j <= num; j++) {
+            if (checkSNT(j)) {
+                sum += j;
+            }
+        }
+            console.log(sum)
+    }
+</script>
+</body>
+</html>

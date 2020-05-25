@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<script>
+    let birthDay = prompt("Nhập năm sinh của bạn.");
+    let k = new Date().getFullYear();
+    let age = new Date(birthDay).getFullYear();
+    result = k - age;
+    if (result > 0) {
+        alert("Tuổi của bạn là; " + result);
+    }else {
+        alert("Nhập sai rồi!");
+    }
+
+</script>
+</body>
+</html>

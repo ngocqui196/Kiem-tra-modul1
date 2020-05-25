@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let arr = new Array(5);
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = new Array(5);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = Math.floor(Math.random() *10 );
+            if (i === j) {
+                sum += arr[i][j];
+            }
+        }
+        document.write(arr[i] + "<br>");
+    }
+    document.write(sum)
+
+
+</script>
+</body>
+</html>
